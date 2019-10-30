@@ -2,12 +2,18 @@ package Runner;
 
 import org.junit.runner.RunWith;
 
-import io.cucumber.junit.CucumberOptions;
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "C:\\newWorkSP\\CucumberProjectPrac\\Feature\\LogIn.feature",
-		glue={"StepDefinition"}format = {"pretty"})
+				features = "Feature\\TestLogin.Feature",
+				glue={"StepDefinition"},
+				//tags= {"@Regression"},
+				tags= {"@Regression, @Smoke"}
+				//tags= {"@Regression", "@Smoke"}
+			
+				)
 
 public class TestRunner {
 
